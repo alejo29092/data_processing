@@ -155,8 +155,9 @@ def table_compleit(table, data, db_conn):
     data_marge_purchaseamount = data_marge_purchaseamount.rename(columns={'id': 'purchaseamount_id'})
     data_finalized = data_marge_purchaseamount.loc[:, ['CustomerID', 'purchaseamount_id', 'Email', 'name_id',
                                                        'gender_id', 'PhoneNumber', 'age_id', 'Address']]
-    data_finalized['PhoneNumber'] = data_finalized['PhoneNumber'].str.replace('-', ' ')
+
     data_finalized['PhoneNumber'] = data_finalized['PhoneNumber'].str.replace(' ', '')
+    data_finalized['PhoneNumber'] = data_finalized['PhoneNumber'].str.replace('-', ' ')
 
 
 
