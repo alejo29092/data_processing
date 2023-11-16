@@ -1,4 +1,4 @@
-import data_clean
-data = data_clean.data
-data_clean.clean(data)
+import data_clean_input as dta
+data = dta.data
+dta.clean(data)
 
