@@ -4,7 +4,9 @@ import matplotlib.pyplot as plt
 import re
 data = pd.read_json("C:/Users/alejo/Desktop/pythonProject7/dataset.json")
 print(data)
-
+"""
+here is the solutions or problems presented during the program
+"""
 
 def fate_ejem(data):
     df = data
@@ -186,3 +188,11 @@ data_ver4= valid_email_2(data_ver_3)
 
 # Lectura del archivo
 # df_books = pd.read_csv(df_rooute_1_books, delimiter=',', encoding=encoding)
+def clean(a):
+    """
+     Remove rows where any essential column (CustomerID, FirstName, LastName, Email, PhoneNumber) is missing.
+    """
+    a = a.drop_duplicates(['CustomerID'])
+
+    return a
+
